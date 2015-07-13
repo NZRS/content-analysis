@@ -49,6 +49,11 @@ class Title_stats:
     def bottom_movies(self, num = 1):
         self.num = num
         return Counter(self.score_dict).most_common()[-num:]
+        
+    def ratings_distribution(self):
+        self.hist_list = []
+        self.hist_list = [int(x) for x in self.score_dict.values()]
+        return self.hist_list
 
     def top_actors(self, num = 1):
         self.num = num

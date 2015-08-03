@@ -57,7 +57,7 @@ class Title_stats:
 
     def top_actors(self, num = 1):
         self.num = num
-        return Counter(actors).most_common(num)
+        return Counter(self.actors).most_common(num)
     
     def nz_origin(self):
         counter = 0
